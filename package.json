@@ -1,0 +1,11 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuyingjie/examples.git"
+  },
+  "author": "xuyingjie",
+  "license": "MIT"
+}
