@@ -15,6 +15,7 @@ module.exports = {
         "sourceType": "module"
     },
     // "plugins": ["react"],
+    "plugins": ["html"],
     "rules": {
         "indent": ["warn", 2, { "SwitchCase": 1 }],
         "linebreak-style": ["warn", "unix"],

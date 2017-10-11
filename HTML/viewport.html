@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>REM</title>
+  <script>
+    var isAndroid = window.navigator.appVersion.match(/android/i)
+    var dpr = window.devicePixelRatio
+    if (isAndroid) {
+      dpr = 1
+    }
+    var scale = 1 / dpr
+    document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + '"/>')
+    document.documentElement.setAttribute('data-dpr', dpr)
+
+    // rem 适配
+    var screenWidth = document.documentElement.getBoundingClientRect().width    // depend on viewport scale
+    var fontSize = 100 / 750 * screenWidth                                        // 100/750 design size
+    document.documentElement.style.fontSize = fontSize + 'px'
+
+// window.addEventListener('resize',remSize)
+  </script>
+  <style>
+    html {
+      font-size: 100px;
+    }
+
+    body {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    [data-dpr="2"] body {
+      font-size: 28px;
+    }
+
+    [data-dpr="3"] body {
+      font-size: 42px;
+    }
+
+    .rem0 {
+      width: 6rem;
+      background-color: steelblue;
+      height: 0.6rem;
+    }
+
+    .rem {
+      width: 7.5rem;
+      height: 0.6rem;
+      line-height: 0.6rem;
+      text-align: center;
+
+      box-sizing: border-box;
+      border: 2px solid darkslategrey;
+      /*background-color: steelblue;*/
+    }
+  </style>
+</head>
+
+<body>
+
+  <p class="rem0">hello world</p>
+  <p class="rem">hello world。你好啊，欢乐的精灵</p>
+
+</body>
+
+</html>

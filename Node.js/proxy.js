@@ -15,7 +15,7 @@ app.use('/api', function (req, res, next) {
   next()
 })
 
-app.use('/api', proxy({ target: 'https://eqldwf.cn', changeOrigin: true }))
+app.use('/api', proxy({ target: 'https://pessoa.cn', changeOrigin: true }))
 
 app.listen(3000)
 
