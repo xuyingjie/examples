@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- https://pessoa.cn/web/firefox -->
+  <h1>h1</h1>
+
+  <script>
+    window.addEventListener('load', function (event) {
+      console.log('All resources finished loading.')
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('DOM fully loaded and parsed.')
+    })
+    // for (var i = 0; i < 1000000000; i++) { }
+    setTimeout(() => console.log('setTimeout.'), 1000)
+  </script>
+
+  <h2>h2</h2>
+
+  <!-- 请求需要2s；这时候会先渲染已经解析出的渲染树。 -->
+  <!-- 需要着重指出的是，这是一个渐进的过程。
+  为达到更好的用户体验，呈现引擎会力求尽快将内容显示在屏幕上。
+  它不必等到整个 HTML 文档解析完毕之后，就会开始构建呈现树和设置布局。
+  在不断接收和处理来自网络的其余内容的同时，呈现引擎会将部分内容解析并显示出来。  -->
+  <script src="http://localhost:3001"></script>
+  <h3>h3</h3>
+
+  <script src="load.js"></script>
+</body>
+
+</html>

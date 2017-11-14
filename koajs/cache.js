@@ -24,8 +24,17 @@ app.use(async (ctx, next) => {
 //   await next()
 // })
 
-router.get('/', (ctx, next) => {
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(x)
+    }, 2000)
+  })
+}
+
+router.get('/', async (ctx, next) => {
   // ctx.status = 201
+  await resolveAfter2Seconds()
   ctx.body = 'hello world'
 })
 
