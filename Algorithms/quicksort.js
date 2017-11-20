@@ -3,16 +3,12 @@
 function quickSort(arr) {
   if (arr.length < 2) return arr
 
-  const pivot = arr[0]
+  const mid = Math.floor(arr.length / 2)
+  const pivot = arr.splice(mid, 1)[0]
   const small = arr.filter(n => n <= pivot)
   const big = arr.filter(n => n > pivot)
-  // for (let i = 1; i < arr.length; i++) {
-  //   if (arr[i] <= pivot) {
-  //     small.push(arr[i])
-  //   } else {
-  //     big.push(arr[i])
-  //   }
-  // }
-  return [...quickSort(small), ...quickSort(big)]
+  return [...quickSort(small), pivot, ...quickSort(big)]
 }
 
+let arr = [23, 89, -23, 3, 5, 1, 6, 4, 56, 78, 23, 9]
+console.log(quickSort(arr))
