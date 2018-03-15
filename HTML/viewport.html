@@ -12,21 +12,20 @@
       dpr = 1
     }
     var scale = 1 / dpr
+    // document.write 在当前 document.close前的文档流中写入；当文档流已经关闭，这个时候执行doucment.write方法会自动调用document.open方法创建一个新的文档流，并写入新的内容，再通过浏览器展现，这样就会覆盖原来的内容。
     document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + '"/>')
+    // Document.documentElement returns the Element that is the root element of the document (for example, the <html> element for HTML documents).
     document.documentElement.setAttribute('data-dpr', dpr)
 
     // rem 适配
     var screenWidth = document.documentElement.getBoundingClientRect().width    // depend on viewport scale
-    var fontSize = 100 / 750 * screenWidth                                        // 100/750 design size
+    // 除法会导致误差
+    var fontSize = 100 * screenWidth / 750                                        // 100/750 design size
     document.documentElement.style.fontSize = fontSize + 'px'
 
 // window.addEventListener('resize',remSize)
   </script>
   <style>
-    html {
-      font-size: 100px;
-    }
-
     body {
       font-size: 14px;
       margin: 0;

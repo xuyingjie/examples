@@ -17,10 +17,10 @@ module.exports = {
     // "plugins": ["react"],
     "plugins": ["html"],
     "rules": {
-        "indent": ["warn", 2, { "SwitchCase": 1 }],
+        "indent": ["off", 2, { "SwitchCase": 1 }],
         "linebreak-style": ["warn", "unix"],
         "quotes": ["warn", "single"],
-        "semi": ["warn", "never"],
+        "semi": ["off", "never"],
         "no-console": ["warn"],
         "no-unused-vars": ["warn"],
     }
