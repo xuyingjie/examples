@@ -1,0 +1,59 @@
+html, body {
+    height: 100%;
+    height: 100vh;
+
+    text-size-adjust: 100%;
+    /* 增加该属性，可以增加弹性 */
+    -webkit-overflow-scrolling: touch;
+    // overflow-scrolling: touch;
+    /* retina屏幕抗锯齿 */
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 0.3rem;
+    font-family: 'PingFangSC-Regular';
+}
+
+img {
+    display: block;
+}
+
+input, textarea {
+    outline: none;
+}
+
+p {
+    margin: 0;
+}
+
+strong, .bold {
+    font-family: 'PingFangSC-Medium';
+    font-weight: bold;
+}
+
+.toast {
+    font-size: 0.25rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.1rem;
+    transition: 0.001s;
+    z-index: 99999;
+    padding: 0.25rem 0.5rem;
+    white-space: nowrap;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page {
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    // background: #fff;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="js/compatible-cover.min.js" charset="utf-8"></script>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
+    <meta name="version" content="<%= htmlWebpackPlugin.options.version %>">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <link rel="icon" type="image/png" href="https://appd.knowbox.cn/public/img/favicon.png">
+
+    <!-- 预加载 -->
+    <!-- <link as="image" href="https://right.png" rel="preload"> -->
+</head>
+
+<body class="cover">
+    <div id="app"></div>
+
+    <!-- 手机调试工具 -->
+    <!-- <script src="/js/eruda-1.5.4.min.js"></script>
+    <script>eruda.init();</script> -->
+
+    <!-- <script>
+        window.onerror = function(msg, url, line) {
+            console.log('onerror!');
+            console.log(msg, url, line);
+        };
+    </script> -->
+
+    <!-- built files will be auto injected -->
+</body>
+
+</html>
