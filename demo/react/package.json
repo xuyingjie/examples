@@ -1,0 +1,43 @@
+{
+  "name": "fragment",
+  "version": "3.0.0",
+  "description": "Cache Tool",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xuyingjie/fragment.git"
+  },
+  "author": "xuyingjie@outlook.com",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^0.8.0",
+    "normalize.css": "^8.0.1",
+    "pessoa": "^1.0.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router": "^6.0.0-alpha.2",
+    "react-router-dom": "^6.0.0-alpha.2"
+  },
+  "devDependencies": {
+    "react-scripts": "^3.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      "last 1 chrome version",
+      "last 1 firefox version"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version"
+    ]
+  },
+  "homepage": "."
+}
